@@ -10,6 +10,8 @@
 
 var SnakeGame = {};
 
+const treeweeks = 504;
+
 SnakeGame.Game = function (parameters) {
     this.app = parameters.app;
 
@@ -60,7 +62,7 @@ SnakeGame.Game.prototype.placeMeals = function () {
         var meal = new PIXI.Graphics();
         this.app.stage.addChild(meal);
 
-        if (this.snake.points === 504) {
+        if (this.snake.points === treeweeks) {
             this.meals.push({
                 x: 300,
                 y: 180,
@@ -97,7 +99,7 @@ SnakeGame.Snake = function () {
     t_Snake.ss = [
         ['r', 6],
     ];
-    t_Snake.points = 504;
+    t_Snake.points = treeweeks;
 
     this.default_color = {
         r: 79,
@@ -256,7 +258,7 @@ SnakeGame.Snake.prototype.mealCollision = function (parameters) {
                 ls = t_Snake.ss[0];
             }
 
-            t_Snake.addition += 0.01;
+            t_Snake.addition += 0.001;
 
             t_Snake.wa += 5;
 
@@ -373,7 +375,7 @@ Date.getFormattedDateDiff = function(date1, date2) {
         var diff = a.diff(b, intervals[i]);
         b.add(diff, intervals[i]);
         if(diff > 0) {
-            out.push(diff + ' ' + intervals[i]);
+            out.push(diff + ' ' + (diff > 1 ? intervals[i] : intervals[i].slice(0, -1)));
         }
     }
     return out.join(', ');
@@ -452,6 +454,10 @@ var Game = function (parameters) {
 
             pointsText.setText(Date.getFormattedDateDiff(moment(0).toDate(), moment(0).add(t_Game.snake.points, 'hours').toDate()));
 
+            if (t_Game.snake.points === 0) {
+                t_Game.win();
+            }
+
             if (t_Game.snake.selfCollision() || t_Game.snake.borderCollision()) {
                 t_Game.finish();
             }
@@ -464,6 +470,12 @@ var Game = function (parameters) {
         t_Game.events.finish({
             points: t_Game.snake.points
         });
+    };
+
+    t_Game.win = function () {
+        t_Game.playing = false;
+        t_Game.ticker.stop();
+        t_Game.events.win();
     };
 
     t_Game.stop = function () {

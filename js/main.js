@@ -41,6 +41,10 @@ $(document).ready(function (event) {
         $gameOver.stop().fadeIn(250);
     };
 
+    game.events.win = function () {
+        $pause.stop().fadeIn(250);
+    };
+
     game.events.begin = function () {
         $pause.stop().fadeOut(250);
         $gameOver.stop().fadeOut(250);

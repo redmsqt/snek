@@ -189,6 +189,19 @@ img {
     font-weight: 700;
 }
 
+.btn2 {
+    background-color: #73858f;
+    line-height: 50px;
+    border-radius: 36px;
+    color: #26282f;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: Satoshi, sans-serif;
+    font-size: 16px;
+    font-stretch: 100%;
+    font-weight: 700;
+}
+
 .btn:hover {
     background-color: #41db96;
 }
