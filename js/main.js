@@ -22,7 +22,7 @@ $(document).ready(function (event) {
     //load font
     const fontFamily = 'Satoshi';
     let newStyle = document.createElement("style");
-    let fontFace = "@font-face {font-family: '" + fontFamily + "'; src: url('../Satoshi-Variable.ttf');}";
+    let fontFace = "@font-face {font-family: '" + fontFamily + "'; src: url('Satoshi-Variable.ttf');}";
     newStyle.appendChild(document.createTextNode(fontFace));
     document.head.appendChild(newStyle);
     let span = document.createElement("span");
