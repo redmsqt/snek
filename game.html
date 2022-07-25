@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name=description content="Snake game.">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/game.css" />
+
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/pixi.min.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <title>Basilisk</title>
+</head>
+<body>
+        <canvas class="gameView"  style="touch-action: none;
+    position: fixed;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 600px;
+    cursor: inherit;">
+            Your browser does not support canvas element.
+        </canvas>
+    <div class="gameMenu gameOver">
+        <div class="table">
+            <div class="table_td">
+                <div class="gameMenu_box">
+                    <div class="gameOver_startButton btn">Play</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gameMenu pause">
+        <div class="table">
+            <div class="table_td">
+                <div class="gameMenu_box">
+                    <div class="gameMenu_box_title">
+                        Game Paused
+                    </div>
+                    <div class="gameMenu_box_content">
+                        <div class="gameMenu_box_points">
+                        <div class="clear"></div>
+                        <div class="pause_continueButton btn">
+                            Continue
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
