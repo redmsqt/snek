@@ -421,7 +421,7 @@ var Game = function (parameters) {
         fontFamily: 'Satoshi',
         fontSize: 22,
         fontWeight: 500,
-        fill: '#4fffb0'
+        fill: '#fff'
     });
     pointsText.x = 20;
     pointsText.y = 20;

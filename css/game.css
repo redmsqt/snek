@@ -37,10 +37,33 @@ body {
     ) fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    line-height: inherit;
-    font-weight: inherit;
-    font-size: inherit;
+.header {
+    /* display: flex; */
+    /* flex-direction: row; */
+    align-items: center;
+    /* padding: 30px; */
+    /* gap: 101px; */
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    /* right: 0px; */
+    top: 0px;
+    background: rgba(28, 26, 31, 0.2);
+    backdrop-filter: blur(54px);
+}
+
+h1 {
+    font-family: 'Satoshi';
+    font-style: normal;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 80px;
+    background: linear-gradient(90deg, #4FFFB0 1.27%, #B3FF8F 48.96%, #FF984E 104.14%), linear-gradient(90deg, #4FFFB0 1.27%, #A2FF76 53.24%, #FF984E 104.14%), linear-gradient(90deg, #FFCE4F 1.27%, #4FFFB0 104.14%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 textarea {
@@ -87,6 +110,8 @@ a:hover {
 
 img {
     border: 0px;
+    height: 36px;
+    padding-top: 13px;
 }
 
 .table {
