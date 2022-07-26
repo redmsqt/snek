@@ -64,7 +64,7 @@ SnakeGame.Game.prototype.placeMeals = function () {
 
         if (this.snake.points === treeweeks) {
             this.meals.push({
-                x: 300,
+                x: 400,
                 y: 180,
                 meal: meal
             });
